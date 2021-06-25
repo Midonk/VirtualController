@@ -9,7 +9,7 @@ namespace VirtualController
             
         [Header("Config")]
         [SerializeField]
-        protected Image _buttonGraphics;
+        protected Image _controlGraphic;
 
         #endregion
     }

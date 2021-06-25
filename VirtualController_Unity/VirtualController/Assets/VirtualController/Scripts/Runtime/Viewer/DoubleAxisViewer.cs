@@ -9,7 +9,7 @@ namespace VirtualController
         [Header("Viewer")]
         [SerializeField]
         private RectTransform _graphicTransform;
-        [SerializeField, Range(0, 1)]
+        [SerializeField, Range(0, 2)]
         private float _maxDisplacement;
             
         #endregion
@@ -17,7 +17,7 @@ namespace VirtualController
 
         #region Unity API
 
-        private void Awake() 
+        protected virtual void Awake() 
         {
             _defaultGraphicPosition = _graphicTransform.position;
         }

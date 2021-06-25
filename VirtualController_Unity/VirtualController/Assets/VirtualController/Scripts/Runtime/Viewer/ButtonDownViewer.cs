@@ -4,22 +4,26 @@ namespace VirtualController
 {
     public class ButtonDownViewer : BaseButtonViewer
     {
-        #region Exposed
+        #region Setters
 
-        [Header("Button down viewer")]    
-        [SerializeField]
-        private Color _color = Color.white;
-
+        public Color ActiveColor { set => _activeColor = value; }
+            
         #endregion
-        
 
         #region Main
             
         public override void OnEventRaised()
         {
-            _buttonGraphics.color = _color;
+            _controlGraphic.color = _activeColor;
         }
 
+        #endregion
+
+
+        #region Private Fields
+
+        private Color _activeColor;
+            
         #endregion
     }
 }

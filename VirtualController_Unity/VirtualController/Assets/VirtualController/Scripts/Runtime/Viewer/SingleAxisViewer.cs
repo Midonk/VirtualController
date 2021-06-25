@@ -9,11 +9,21 @@ namespace VirtualController
 
         [Header("Viewer")]
         [SerializeField]
-        private Image _controllerGraphic;
-        [SerializeField]
-        private Color _baseColor = Color.white;
-        [SerializeField]
-        private Color _maxValueColor = Color.white;
+        private Image _controlGraphic;
+
+        #endregion
+
+
+        #region Setters
+            
+        public Color BaseColor 
+        { 
+            set{
+                _baseColor = value;
+                _controlGraphic.color = _baseColor;
+            }
+        }
+        public Color MaxValueColor { set => _maxValueColor = value; }
 
         #endregion
 
@@ -22,8 +32,16 @@ namespace VirtualController
 
         private void Update() 
         {
-            _controllerGraphic.color = Color.Lerp(_baseColor, _maxValueColor, _axisValue);
+            _controlGraphic.color = Color.Lerp(_baseColor, _maxValueColor, _axisValue);
         }
+            
+        #endregion
+
+
+        #region Private Fields
+
+        private Color _baseColor = Color.white;
+        private Color _maxValueColor = Color.grey;
             
         #endregion
     }

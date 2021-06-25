@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "com.danieleverland.scriptableobjectarchitecture": "https://github.com/DanielEverland/ScriptableObject-Architecture.git#release/stable",
+    "com.transmedia.debuginput": "https://github.com/noctisyounis/DebugInput.git",
+    "com.transmedia.nullchecker": "https://github.com/noctisyounis/NullChecker.git",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.collab-proxy": "1.3.9",
     "com.unity.ide.rider": "2.0.7",

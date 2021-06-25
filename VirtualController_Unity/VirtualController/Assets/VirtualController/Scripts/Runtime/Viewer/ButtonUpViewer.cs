@@ -4,11 +4,15 @@ namespace VirtualController
 {
     public class ButtonUpViewer : BaseButtonViewer
     {
-        #region Exposed
+        #region Setters
 
-        [Header("Button up viewer")]
-        [SerializeField]
-        protected Color _defaultColor = Color.white;
+        public Color DefaultColor 
+        {
+             set{
+                 _defaultColor = value;
+                 _controlGraphic.color = _defaultColor; 
+             }
+        }
             
         #endregion
 
@@ -17,18 +21,15 @@ namespace VirtualController
             
         public override void OnEventRaised()
         {
-            _buttonGraphics.color = _defaultColor;
+            _controlGraphic.color = _defaultColor;
         }
 
         #endregion
 
 
-        #region Unity API
-
-        private void Awake() 
-        {
-            _buttonGraphics.color = _defaultColor;    
-        }
+        #region Private Fields
+            
+        private Color _defaultColor;
 
         #endregion
     }
