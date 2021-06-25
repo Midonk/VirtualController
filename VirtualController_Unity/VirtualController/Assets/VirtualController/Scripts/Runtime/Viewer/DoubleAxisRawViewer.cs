@@ -31,9 +31,8 @@ namespace VirtualController
 
         #region Unity API
 
-        protected override void Awake()
+        private void Awake()
         {
-            base.Awake();
             _controlGraphic.color = _defaultColor;    
         }
         
