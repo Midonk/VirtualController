@@ -3,7 +3,7 @@ using ScriptableObjectArchitecture;
 
 namespace VirtualController
 {
-    public class BaseButtonControl : MonoBehaviour
+    public class BaseButtonControlDispatcher : MonoBehaviour
     {
         #region Exposed
 
